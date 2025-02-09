@@ -1,29 +1,29 @@
-"use client";
+'use client';
 
-import { AnimatePresence, motion } from "motion/react";
+import { AnimatePresence, motion } from 'motion/react';
 import React, {
   ComponentPropsWithoutRef,
   useEffect,
   useMemo,
   useState,
-} from "react";
+} from 'react';
 
 export function AnimatedListItem({ children }: { children: React.ReactNode }) {
   const animations = {
     initial: { scale: 0, opacity: 0 },
     animate: { scale: 1, opacity: 1, originY: 0 },
     exit: { scal: 0, opacity: 0 },
-    transition: { type: "spring", stiffness: 350, damping: 40 },
+    transition: { type: 'spring', stiffness: 350, damping: 40 },
   };
 
   return (
-    <motion.div {...animations} layout className="mx-auto w-full">
+    <motion.div {...animations} layout className='mx-auto w-full'>
       {children}
     </motion.div>
   );
 }
 
-export interface AnimatedListProps extends ComponentPropsWithoutRef<"div"> {
+export interface AnimatedListProps extends ComponentPropsWithoutRef<'div'> {
   children: React.ReactNode;
   delay?: number;
 }
@@ -33,7 +33,7 @@ export const AnimatedList = React.memo(
     const [index, setIndex] = useState(0);
     const childrenArray = useMemo(
       () => React.Children.toArray(children),
-      [children],
+      [children]
     );
 
     useEffect(() => {
@@ -65,7 +65,7 @@ export const AnimatedList = React.memo(
         </AnimatePresence>
       </div>
     );
-  },
+  }
 );
 
-AnimatedList.displayName = "AnimatedList";
+AnimatedList.displayName = 'AnimatedList';
