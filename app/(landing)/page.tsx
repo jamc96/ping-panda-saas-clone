@@ -3,17 +3,17 @@ import { Heading } from '@/components/heading';
 import { MaxWidthWrapper } from '@/components/max-width-wrapper';
 import { ShinyButton } from '@/components/shiny-button';
 
-export default function Home() {
+export default function Page() {
   return (
     <>
-      <section className='relative py-24 sm:py-32 bg-brand-25'>
+      <section className='relative py-24 sm:py-32'>
         <MaxWidthWrapper className='text-center'>
           <div className='reliative mx-auto text-center flex flex-col items-center gap-10'>
             <div>
               <Heading>
                 <span>Real-Time SaaS Insights,</span>
                 <br />
-                <span className='relative bg-gradient-to-r from-brand-700 to-brand-800 text-transparent bg-clip-text'>
+                <span className='relative bg-gradient-to-r from-primary to-primary-darker text-transparent bg-clip-text'>
                   Delivered to Your Discord
                 </span>
               </Heading>
@@ -34,7 +34,7 @@ export default function Home() {
                 'Track sales, new users, or any other event',
               ].map((item, index) => (
                 <li key={index} className='flex gap-1.5 items-center text-left'>
-                  <Check className='size-5 shrink-0 text-brand-700' />
+                  <Check className='size-5 shrink-0 text-primary' />
                   {item}
                 </li>
               ))}
@@ -50,6 +50,7 @@ export default function Home() {
           </div>
         </MaxWidthWrapper>
       </section>
+      
     </>
   );
 }
