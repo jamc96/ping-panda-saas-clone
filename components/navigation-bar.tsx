@@ -1,11 +1,12 @@
 import Link from 'next/link';
 import { MaxWidthWrapper } from './max-width-wrapper';
-import { SignedOut } from '@clerk/nextjs';
+import { SignOutButton } from '@clerk/nextjs';
 import { Button, buttonVariants } from './ui/button';
 import { ArrowRight } from 'lucide-react';
+import { currentUser } from '@clerk/nextjs/server';
 
-export const NavigationBar = () => {
-  const user = true;
+export const NavigationBar = async () => {
+  const user = await currentUser();
   return (
     <nav className='sticky z-[100] h-16 inset-x-0 top-0 w-full border-b border-gray-200 bg-white/80 backdrop-blur-lg transition-all'>
       <MaxWidthWrapper>
@@ -16,11 +17,11 @@ export const NavigationBar = () => {
           <div className='h-full flex items-center space-x-4'>
             {user ? (
               <>
-                <SignedOut>
+                <SignOutButton>
                   <Button variant='ghost' size='sm'>
                     Sign Out
                   </Button>
-                </SignedOut>
+                </SignOutButton>
                 <Link
                   href='/dasboard'
                   className={buttonVariants({
@@ -62,7 +63,7 @@ export const NavigationBar = () => {
                     className: 'inline-flex items-center gap-1',
                   })}
                 >
-                  Sign Out
+                  Sign Up
                   <span className='ml-1.5 size-4'>
                     <ArrowRight />
                   </span>
