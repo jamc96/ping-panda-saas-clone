@@ -28,7 +28,9 @@ export default {
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))',
-					darker: 'hsl(var(--primary-darker))'
+					dark: 'hsl(var(--primary-dark))',
+					darkest: 'hsl(var(--primary-darkest))',
+					lightest: 'hsl(var(--primary-lightest))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -64,5 +66,6 @@ export default {
 			}
 		}
 	},
+	// eslint-disable-next-line @typescript-eslint/no-require-imports
 	plugins: [require("tailwindcss-animate")],
 } satisfies Config;

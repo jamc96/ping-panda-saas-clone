@@ -11,7 +11,6 @@
     --popover-foreground: 224 71.4% 4.1%;
     --primary: 223 53% 45%;
     --primary-foreground: 210 20% 98%;
-    --primary-darker: 225 55% 35%;
     --secondary: 220 14.3% 95.9%;
     --secondary-foreground: 220.9 39.3% 11%;
     --muted: 220 14.3% 95.9%;
@@ -29,6 +28,10 @@
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
+    /* Custom Colors Following Pattern*/
+    --primary-dark: 225 55% 35%;
+    --primary-darkest: 225 55% 35%;
+    --primary-lightest: 228 56% 98%;
   }
   .dark {
     --background: 224 71.4% 4.1%;
@@ -39,7 +42,6 @@
     --popover-foreground: 210 20% 98%;
     --primary: 210 20% 98%;
     --primary-foreground: 220.9 39.3% 11%;
-    --primary-darker: 225 55% 35%;
     --secondary: 215 27.9% 16.9%;
     --secondary-foreground: 210 20% 98%;
     --muted: 215 27.9% 16.9%;
@@ -56,6 +58,10 @@
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
+    /* Custom Colors Following Pattern*/
+    --primary-dark: 225 55% 35%;
+    --primary-darkest: 225 55% 35%;
+    --primary-lightest: 228 56% 98%;
   }
 }
 @layer base {
