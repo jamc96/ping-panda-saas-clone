@@ -1,7 +1,7 @@
 import { Check } from 'lucide-react';
 import { Heading } from '@/components/heading';
 import { MaxWidthWrapper } from '@/components/max-width-wrapper';
-import { ShinyButton } from '@/components/shinny-button';
+import { ShinyButton } from '@/components/shiny-button';
 
 export default function Home() {
   return (
